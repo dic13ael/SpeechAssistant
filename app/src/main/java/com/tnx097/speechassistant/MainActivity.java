@@ -27,4 +27,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+    public void ovrigtClick(View v) {
+        Intent intent = new Intent(this, OvrigtActivity.class);
+        startActivity(intent);
+    }
+
 }

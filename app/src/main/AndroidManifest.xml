@@ -18,11 +18,13 @@
         <activity
             android:name=".RestaurantActivity"
             android:label="Restaurang"
-            android:parentActivityName=".MainActivity">
-
-        </activity>
-        <activity android:name=".ListenActivity"></activity>
-        <activity android:name=".RestaurantActivity"></activity>
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".ListenActivity"
+            android:label="Lyssnar"></activity>
+        <activity
+            android:name=".OvrigtActivity"
+            android:label="Övrigt"></activity>
     </application>
 
 </manifest>
