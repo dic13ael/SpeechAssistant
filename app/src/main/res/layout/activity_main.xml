@@ -133,7 +133,7 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/övrigt"
+            android:src="@drawable/ovrigt"
             android:id="@+id/imageView4"
             android:scaleX="0.5"
             android:scaleY="0.5"
