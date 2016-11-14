@@ -29,14 +29,16 @@
         >
         <Button
             android:id="@+id/button"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:adjustViewBounds="true"
             android:background="@android:color/holo_green_light"
             android:text="Lyssna"
-            android:textColor="@android:color/background_light" />
+            android:textColor="@android:color/background_light"
+            android:paddingBottom="10dp"/>
+
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -57,6 +59,7 @@
                 android:paddingLeft="35dp"
                 android:paddingBottom="10dp"
                 android:paddingTop="10dp"
+
             >
             <ImageView
                 android:id="@+id/imageView2"
@@ -82,7 +85,9 @@
             android:paddingRight="15dp"
             android:paddingLeft="15dp"
             android:paddingBottom="10dp"
-            android:paddingTop="10dp">
+            android:paddingTop="10dp"
+            android:onClick="restaurangClick"
+            >
 
             <ImageView
                 android:id="@+id/imageView"
