@@ -36,8 +36,9 @@
             android:adjustViewBounds="true"
             android:background="@android:color/holo_green_light"
             android:text="Lyssna"
+            android:textSize="20dp"
             android:textColor="@android:color/background_light"
-            android:paddingBottom="10dp"/>
+            />
 
         <RelativeLayout
             android:layout_width="wrap_content"
