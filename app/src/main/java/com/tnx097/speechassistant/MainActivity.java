@@ -22,4 +22,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+    public void restaurangClick(View v){
+        Intent intent = new Intent(this,RestaurantActivity.class);
+        startActivity(intent);
+
+    }
 }

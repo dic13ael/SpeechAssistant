@@ -11,144 +11,158 @@
 
 
     <ImageView
+        android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/person"
-        android:id="@+id/imageView6"
         android:layout_centerHorizontal="true"
-        android:scaleType="centerCrop"
-        android:scaleX="0.5"
-        android:scaleY="0.5"
-        android:adjustViewBounds="true"
-        />
+        android:scaleX="1.1"
+        android:scaleY="1.1"
+        android:paddingTop="15dp"
+        android:src="@drawable/person_resized" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView6"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         >
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Lyssna"
-        android:id="@+id/button"
-        android:textColor="@android:color/background_light"
-        android:background="@android:color/holo_green_light"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:scaleX="0.7"
-        android:scaleY="0.7"
-        android:adjustViewBounds="true"
-        />
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/bank"
-        android:background="@color/buttonColor"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-
-        >
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/bank"
-            android:layout_below="@+id/bank"
-            android:id="@+id/imageView2"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:adjustViewBounds="true"
-
-            />
-        <TextView
+        <Button
+            android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Bank"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:background="@android:color/holo_green_light"
+            android:text="Lyssna"
             android:textSize="20dp"
-            android:gravity="center_horizontal"
+            android:textColor="@android:color/background_light"
             />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/restaurang"
-        android:background="@color/buttonColor"
-        >
-        <ImageView
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/restaurang"
-            android:id="@+id/imageView"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:adjustViewBounds="true"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Restaurang"
-            android:textSize="20dp"
-            android:gravity="center_horizontal"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/shop"
-        android:layout_below="@id/restaurang"
-        android:background="@color/buttonColor"
-        >
-        <ImageView
+            android:paddingTop="20dp"
+            android:paddingBottom="40dp"
+            android:gravity="center_vertical"
+            >
+            <LinearLayout
+            android:id="@+id/bank"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/shop"
-            android:id="@+id/imageView3"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:adjustViewBounds="true"
-            />
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Affär"
-            android:textSize="20dp"
-            android:gravity="center_horizontal"
-            />
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:id="@+id/ovrigt"
-        android:layout_below="@id/restaurang"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="@color/buttonColor"
-        >
-        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="@color/buttonColor"
+            android:orientation="vertical"
+                android:layout_margin="10dp"
+                android:paddingRight="35dp"
+                android:paddingLeft="35dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+
+            >
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bank_resized"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Bank"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/restaurang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ovrigt"
-            android:id="@+id/imageView4"
-            android:scaleX="0.5"
-            android:scaleY="0.5"
-            android:adjustViewBounds="true"
-            />
-        <TextView
-            android:layout_width="match_parent"
+            android:background="@color/buttonColor"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:paddingRight="15dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:onClick="restaurangClick"
+            >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/restaurang_resized"
+                android:paddingBottom="0.5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Restaurang"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/shop"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Övrigt"
-            android:textSize="20dp"
-            android:gravity="center_horizontal"
-            />
+            android:layout_below="@id/restaurang"
+            android:background="@color/buttonColor"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:paddingRight="35dp"
+            android:paddingLeft="35dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/shop_resized" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Affär"
+                android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ovrigt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/restaurang"
+            android:background="@color/buttonColor"
+            android:orientation="vertical"
+            android:layout_margin="10dp"
+            android:paddingRight="35dp"
+            android:paddingLeft="35dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ovrigt_resized" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:text="Övrigt"
+                android:textSize="20dp" />
+
     </LinearLayout>
 
-
-
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>
