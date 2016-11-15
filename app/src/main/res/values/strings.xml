@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">SpeechAssistant</string>
-    <color name="background_blue">#CEE3F6</color>
-    <color name="white">#A9D0F5</color>
+
+    <string name="RestaurangText1">Jag har bokat ett bord för tre personer....</string>
+    <string name="RestaurangText2">Jag är redo att beställa</string>
+    <string name="RestaurangText3">Ursäkta mig, var ligger toaletten?</string>
+    <string name="RestaurangText4">Vilket vin rekommenderar ni att....</string>
+    <string name="RestaurangText5">Jag vill gärna ha min biff stekt med....</string>
+    <string name="RestaurangText6">Kan jag få titta på efterrättsmenyn?</string>
+    <string name="RestaurangText7">Notan tack!</string>
+    <string name="MessageText1">Jag har bokat ett bord för tre personer klockan 18:00. Mitt namn är Malin Andersson</string>
 </resources>
