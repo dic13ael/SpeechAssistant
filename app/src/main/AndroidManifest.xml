@@ -25,6 +25,12 @@
             android:parentActivityName=".RestaurantActivity"
             android:label="Meddelande"
             ></activity>
+        <activity
+            android:name=".ListenActivity"
+            android:label="Lyssnar"></activity>
+        <activity
+            android:name=".OvrigtActivity"
+            android:label="Övrigt"></activity>
     </application>
 
 </manifest>
