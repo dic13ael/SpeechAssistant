@@ -19,7 +19,7 @@
             android:name=".RestaurantActivity"
             android:label="Restaurang"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".ListenActivity" />
+       
         <activity
             android:name=".MessageActivity"
             android:parentActivityName=".RestaurantActivity"
