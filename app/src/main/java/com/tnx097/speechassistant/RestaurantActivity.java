@@ -17,7 +17,7 @@ public class RestaurantActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
     }
     public void MessageClick1(View v){
-        Intent intent = new Intent(this,RestaurantActivity.class);
+        Intent intent = new Intent(this,MessageActivity.class);
         startActivity(intent);
 
     }

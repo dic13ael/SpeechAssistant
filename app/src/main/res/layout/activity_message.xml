@@ -7,14 +7,15 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@color/blueColor"
+    android:background="@color/background_blue"
     tools:context=".MessageActivity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
+        android:background="@drawable/edittext_bg"
         android:padding="10dp"
-        android:layout_margin="10dp"
+        android:layout_above="@id/button3"
+        android:layout_marginBottom="10dp"
         >
     <TextView
         android:layout_width="match_parent"
@@ -23,4 +24,17 @@
         android:textSize="25sp"
         />
     </RelativeLayout>
+    <Button
+        android:text="Spela Upp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_weight="0.03"
+        android:background="@android:color/holo_green_light"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="@android:color/background_light"
+        android:layout_alignParentStart="true"
+        android:textSize="20sp"
+        />
 </RelativeLayout>
