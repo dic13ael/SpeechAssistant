@@ -42,7 +42,7 @@ private TextView textview;
 
 
     }
-    public void setMessage(String m){
+    /*public void setMessage(String m){
         message = m;
     }
 
@@ -55,7 +55,7 @@ private TextView textview;
 
         }
     }
-
+*/
     public void listen(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
