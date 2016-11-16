@@ -12,12 +12,12 @@
     tools:context="com.tnx097.speechassistant.ListenActivity">
 
     <Button
-        android:text="Stoppa"
+        android:text="Lyssna"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
         android:layout_weight="0.03"
-        android:background="#FFBF00"
+        android:background="@android:color/holo_green_light"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:textColor="@android:color/background_light"

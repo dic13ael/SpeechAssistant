@@ -27,9 +27,11 @@
             ></activity>
         <activity
             android:name=".ListenActivity"
+            android:parentActivityName=".MainActivity"
             android:label="Lyssnar"></activity>
         <activity
             android:name=".OvrigtActivity"
+            android:parentActivityName=".MainActivity"
             android:label="Övrigt"></activity>
     </application>
 
