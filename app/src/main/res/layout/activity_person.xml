@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_person"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
@@ -8,7 +9,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/background_blue"
-    tools:context=".MessageActivity">
+    tools:context="com.tnx097.speechassistant.PersonActivity">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -17,12 +19,12 @@
         android:layout_above="@id/button3"
         android:layout_marginBottom="10dp"
         >
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/MessageText1"
-        android:textSize="25sp"
-        />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hej! Jag har en hörselnedsättning och kommunicerar via mobilen. Prata högt och tydligt så översätter min mobil så att jag kan förstå."
+            android:textSize="25sp"
+            />
     </RelativeLayout>
     <Button
         android:text="Spela Upp"
@@ -37,4 +39,5 @@
         android:layout_alignParentStart="true"
         android:textSize="20sp"
         />
+
 </RelativeLayout>

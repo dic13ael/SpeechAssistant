@@ -4,107 +4,146 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.tnx097.speechassistant.RestaurantActivity">
-<RelativeLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@color/gray">
-    <TextView
-        android:id="@+id/restaurang1"
-        android:onClick="MessageClick1"
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blueColor"
-        android:paddingLeft="7dp"
-        android:text="@string/RestaurangText1"
-        android:textSize="20dp"
-        android:textColor="@color/TextColor"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        />
-    <TextView
-        android:id="@+id/restaurang2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blueColor"
-        android:layout_below="@+id/restaurang1"
-        android:paddingLeft="7dp"
-        android:text="@string/RestaurangText2"
-        android:textSize="20dp"
-        android:textColor="@color/TextColor"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"/>
-    <TextView
-        android:id="@+id/restaurang3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blueColor"
-        android:layout_below="@+id/restaurang2"
-        android:paddingLeft="7dp"
-        android:text="@string/RestaurangText3"
-        android:textSize="20dp"
-        android:textColor="@color/TextColor"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"/>
-    <TextView
-        android:id="@+id/restaurang4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blueColor"
-        android:layout_below="@+id/restaurang3"
-        android:paddingLeft="7dp"
-        android:text="@string/RestaurangText4"
-        android:textSize="20dp"
-        android:textColor="@color/TextColor"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"/>
-    <TextView
-        android:id="@+id/restaurang5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blueColor"
-        android:layout_below="@+id/restaurang4"
-        android:paddingLeft="7dp"
-        android:text="@string/RestaurangText5"
-        android:textSize="20dp"
-        android:textColor="@color/TextColor"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"/>
-    <TextView
-        android:id="@+id/restaurang6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blueColor"
-        android:layout_below="@+id/restaurang5"
-        android:paddingLeft="7dp"
-        android:text="@string/RestaurangText6"
-        android:textSize="20dp"
-        android:textColor="@color/TextColor"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        />
-    <TextView
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:id="@+id/restaurang7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/blueColor"
-        android:layout_below="@+id/restaurang6"
-        android:paddingLeft="7dp"
-        android:text="@string/RestaurangText7"
-        android:textSize="20dp"
-        android:textColor="@color/TextColor"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"/>
-</RelativeLayout>
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/gray">
+
+            <TextView
+                android:id="@+id/restaurang1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:onClick="MessageClick1"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:text="@string/RestaurangText1"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang1"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:text="@string/RestaurangText2"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang2"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:text="@string/RestaurangText3"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang3"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:text="@string/RestaurangText4"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang4"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:text="@string/RestaurangText5"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang5"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:text="@string/RestaurangText6"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang6"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:text="@string/RestaurangText7"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang7"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/restaurang9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/restaurang8"
+                android:layout_marginBottom="1dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/blueColor"
+                android:paddingBottom="15dp"
+                android:paddingLeft="7dp"
+                android:paddingTop="15dp"
+                android:textColor="@color/TextColor"
+                android:textSize="20dp" />
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

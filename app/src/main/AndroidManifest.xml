@@ -18,21 +18,27 @@
         <activity
             android:name=".RestaurantActivity"
             android:label="Restaurang"
-            android:parentActivityName=".MainActivity"></activity>
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MessageActivity"
-            android:parentActivityName=".RestaurantActivity"
             android:label="Meddelande"
-            ></activity>
+            android:parentActivityName=".RestaurantActivity" />
         <activity
             android:name=".ListenActivity"
-            android:parentActivityName=".MainActivity"
-            android:label="Lyssnar"></activity>
+            android:label="Lyssnar"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".OvrigtActivity"
+            android:label="Övrigt"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PersonActivity"
+            android:label="Hälsningsfras"
             android:parentActivityName=".MainActivity"
-            android:label="Övrigt"></activity>
+            >
+
+        </activity>
+
     </application>
 
 </manifest>
