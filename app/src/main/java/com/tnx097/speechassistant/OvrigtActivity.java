@@ -1,6 +1,7 @@
 package com.tnx097.speechassistant;
 
 import android.content.Intent;
+import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,6 +27,7 @@ private String words;
 
         Intent checkTTSIntent = new Intent();
         checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+
         startActivityForResult(checkTTSIntent, 0);
 
         final Button button = (Button) findViewById(R.id.button3);
