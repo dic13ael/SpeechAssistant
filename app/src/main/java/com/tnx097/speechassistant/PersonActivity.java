@@ -48,16 +48,13 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
                 EditText enteredText = (EditText) findViewById(R.id.personText);
                 words = enteredText.getText().toString();
 
-                String words2 = words.replace("å", "oa");
-                String words3 = words2.replace("ä", "ae");
-                String words4 = words3.replace("ö", "oe");
 
                 // Repeat animation for some time
-                int sec=1+words4.length()/6;
+                int sec=1+words.length()/6;
                 animation.setRepeatCount(sec);
                 button.startAnimation(animation);
 
-                speak(words4);
+                speak(words);
 
 
             }
