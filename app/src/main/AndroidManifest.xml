@@ -28,8 +28,20 @@
             android:label="Lyssnar"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".ListenActivity2"
+            android:label="Lyssnar"
+            android:parentActivityName=".OvrigtActivity" />
+        <activity
+            android:name=".ListenActivity3"
+            android:label="Lyssnar"
+            android:parentActivityName=".MessageActivity" />
+        <activity
+            android:name=".ListenActivity4"
+            android:label="Lyssnar"
+            android:parentActivityName=".PersonActivity" />
+        <activity
             android:name=".OvrigtActivity"
-            android:label="Övrigt"
+            android:label="Skriv själv"
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".PersonActivity"

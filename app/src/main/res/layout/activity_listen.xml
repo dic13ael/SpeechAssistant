@@ -33,12 +33,13 @@
         android:layout_marginBottom="20dp">
 
         <TextView
-            android:text="TextView"
+            android:text=" "
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/text_listen"
             android:layout_margin="15dp"
-            android:textSize="18sp" />
+            android:textSize="20sp"
+            android:textColor="@color/TextColor" />
     </ScrollView>
 
 </RelativeLayout>

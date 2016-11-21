@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -26,6 +29,14 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
         actionBar.setDisplayHomeAsUpEnabled(true);
 
 
+        //button animation
+        final Animation animation = new AlphaAnimation(1, 0); // Change alpha from fully visible to invisible
+        animation.setDuration(250); // duration - half a second
+        animation.setInterpolator(new LinearInterpolator()); // do not alter animation rate
+
+        animation.setRepeatMode(Animation.REVERSE); // Reverse animation at the end so the button will fade back in
+
+
         Intent checkTTSIntent = new Intent();
         checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
         startActivityForResult(checkTTSIntent, 0);
@@ -36,9 +47,27 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
 
                 EditText enteredText = (EditText) findViewById(R.id.personText);
                 words = enteredText.getText().toString();
-                Log.d("myapp", "1");
-                speak(words);
-                Log.d("myapp", "2");
+
+                String words2 = words.replace("å", "oa");
+                String words3 = words2.replace("ä", "ae");
+                String words4 = words3.replace("ö", "oe");
+
+                // Repeat animation for some time
+                int sec=1+words4.length()/6;
+                animation.setRepeatCount(sec);
+                button.startAnimation(animation);
+
+                speak(words4);
+
+
+            }
+        });
+
+        final Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                listen();
 
             }
         });
@@ -84,6 +113,12 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
                 startActivity(installTTSIntent);
             }
         }
+    }
+
+
+    public void listen(){
+        Intent intent = new Intent(this, ListenActivity4.class);
+        startActivity(intent);
     }
 
 }

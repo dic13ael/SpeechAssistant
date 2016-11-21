@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -27,6 +30,12 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
         actionBar.setHomeButtonEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        //button animation
+        final Animation animation = new AlphaAnimation(1, 0); // Change alpha from fully visible to invisible
+        animation.setDuration(250); // duration - half a second
+        animation.setInterpolator(new LinearInterpolator()); // do not alter animation rate
+
+        animation.setRepeatMode(Animation.REVERSE); // Reverse animation at the end so the button will fade back in
 
         Intent checkTTSIntent = new Intent();
         checkTTSIntent.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
@@ -38,15 +47,32 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
 
                 EditText enteredText = (EditText) findViewById(R.id.meddelandeText);
                 words = enteredText.getText().toString();
-                Log.d("myapp", "1");
-                speak(words);
-                Log.d("myapp", "2");
+
+                String words2 = words.replace("å", "oa");
+                String words3 = words2.replace("ä", "ae");
+                String words4 = words3.replace("ö", "oe");
+
+                // Repeat animation for some time
+                int sec=1+words4.length()/6;
+                animation.setRepeatCount(sec);
+                button.startAnimation(animation);
+                
+                speak(words4);
+
+
+
+            }
+        });
+
+        final Button button2 = (Button) findViewById(R.id.button2);
+        button2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                listen();
 
             }
         });
     }
     private void speak(String s) {
-        Log.d("myapp", "3");
         myTTS.speak(s, TextToSpeech.QUEUE_FLUSH, null);
     }
 
@@ -67,7 +93,6 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
     }
 
     public void onInit(int initStatus) {
-        Log.d("myapp", "4");
         if (initStatus == TextToSpeech.SUCCESS) {
             myTTS.setLanguage(Locale.getDefault());
         } else if (initStatus == TextToSpeech.ERROR) {
@@ -88,5 +113,10 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
         }
     }
 
+
+    public void listen(){
+        Intent intent = new Intent(this, ListenActivity3.class);
+        startActivity(intent);
+    }
 }
 
