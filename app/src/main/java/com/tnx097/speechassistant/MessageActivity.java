@@ -56,7 +56,7 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
                 int sec=1+words4.length()/6;
                 animation.setRepeatCount(sec);
                 button.startAnimation(animation);
-                
+
                 speak(words4);
 
 
