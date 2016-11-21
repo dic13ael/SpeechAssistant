@@ -65,7 +65,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.actionbar_settings:
-                Toast.makeText(this,"Settings clicked",Toast.LENGTH_LONG).show();break;
+                Intent intent = new Intent(this, SettingsActivity.class);
+                startActivity(intent);
+
+               // Toast.makeText(this,"Settings clicked",Toast.LENGTH_LONG).show();break;
         }
         return super.onOptionsItemSelected(item);
     }

@@ -46,11 +46,14 @@
         <activity
             android:name=".PersonActivity"
             android:label="Hälsningsfras"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="Röstinställningar"
             android:parentActivityName=".MainActivity"
             >
 
         </activity>
-
     </application>
 
 </manifest>
