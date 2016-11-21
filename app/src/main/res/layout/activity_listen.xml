@@ -39,7 +39,7 @@
             android:id="@+id/text_listen"
             android:layout_margin="15dp"
             android:textSize="20sp"
-            android:textColor="@color/TextColor" />
+            android:textColor="?attr/colorControlNormal" />
     </ScrollView>
 
 </RelativeLayout>

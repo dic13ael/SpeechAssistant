@@ -23,16 +23,16 @@
 
         <EditText
             android:id="@+id/edtInput"
-            android:gravity="top"
+
             android:layout_gravity="top"
             android:layout_width="match_parent"
-            android:layout_height="415dp"
+            android:layout_height="match_parent"
             android:inputType="textCapSentences|textMultiLine"
             android:maxLength="2000"
             android:background="@android:color/transparent"
+            android:textColor="?attr/colorControlNormal"
             android:maxLines="40"
             android:textSize="20sp"
-            android:textColorLink="@android:color/white"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingTop="10dp"

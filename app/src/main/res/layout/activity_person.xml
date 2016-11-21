@@ -31,10 +31,15 @@
                 android:id="@+id/personText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColorLink="@android:color/white"
-                android:inputType="textCapSentences|textMultiLine"
+                android:textColor="?attr/colorControlNormal"
+                android:background="@android:color/transparent"
                 android:text="Hej! Jag har en hörselnedsättning och kommunicerar via mobilen. Prata högt och tydligt så översätter min mobil så att jag kan förstå."
-                android:textSize="20sp" />
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                 />
 
         </RelativeLayout>
     </ScrollView>
