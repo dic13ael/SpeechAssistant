@@ -19,9 +19,10 @@ import android.widget.Toast;
 
 import java.util.Locale;
 
-public class PersonActivity extends AppCompatActivity implements TextToSpeech.OnInitListener{
+public class PersonActivity extends AppCompatActivity implements TextToSpeech.OnInitListener {
     private String words;
     private TextToSpeech myTTS;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,7 +53,7 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
 
 
                 // Repeat animation for some time
-                int sec=1+words.length()/6;
+                int sec = 1 + words.length() / 6;
                 animation.setRepeatCount(sec);
                 button.startAnimation(animation);
 
@@ -71,6 +72,7 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
             }
         });
     }
+
     private void speak(String s) {
         Log.d("myapp", "3");
         myTTS.speak(s, TextToSpeech.QUEUE_FLUSH, null);
@@ -96,9 +98,8 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
         Log.d("myapp", "5");
         if (requestCode == 0) {
             if (resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS) {
-                myTTS = new TextToSpeech(this,this);
-            }
-            else {
+                myTTS = new TextToSpeech(this, this);
+            } else {
                 Intent installTTSIntent = new Intent();
                 installTTSIntent.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
                 startActivity(installTTSIntent);
@@ -107,7 +108,7 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
     }
 
 
-    public void listen(){
+    public void listen() {
         Intent intent = new Intent(this, ListenActivity4.class);
         startActivity(intent);
     }
@@ -115,17 +116,21 @@ public class PersonActivity extends AppCompatActivity implements TextToSpeech.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.actionbar_start,menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actionbar_start, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.actionbar_start:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+
+                break;
+            case android.R.id.home:
+                myTTS.stop();
 
         }
         return super.onOptionsItemSelected(item);

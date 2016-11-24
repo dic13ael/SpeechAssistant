@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.CountDownTimer;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +25,7 @@ public class ListenActivity extends AppCompatActivity {
 
 private String message;
 private TextView textview;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +107,8 @@ public void onActivityResult(int request_code, int result_code, Intent i){
             case R.id.actionbar_start:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+
+
 
         }
         return super.onOptionsItemSelected(item);

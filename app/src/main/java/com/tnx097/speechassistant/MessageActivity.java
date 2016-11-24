@@ -51,14 +51,12 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
                 words = enteredText.getText().toString();
 
 
-
                 // Repeat animation for some time
-                int sec=1+words.length()/6;
+                int sec = 1 + words.length() / 6;
                 animation.setRepeatCount(sec);
                 button.startAnimation(animation);
 
                 speak(words);
-
 
 
             }
@@ -72,10 +70,10 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
             }
         });
     }
+
     private void speak(String s) {
         myTTS.speak(s, TextToSpeech.QUEUE_FLUSH, null);
     }
-
 
 
     @Override
@@ -106,24 +104,29 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
     }
 
 
-    public void listen(){
+    public void listen() {
         Intent intent = new Intent(this, ListenActivity3.class);
         startActivity(intent);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater=getMenuInflater();
-        inflater.inflate(R.menu.actionbar_start,menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actionbar_start, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.actionbar_start:
                 Intent intent = new Intent(this, MainActivity.class);
                 startActivity(intent);
+
+                break;
+            case android.R.id.home:
+                myTTS.stop();
+
 
         }
         return super.onOptionsItemSelected(item);
