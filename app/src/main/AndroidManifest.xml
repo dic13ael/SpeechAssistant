@@ -49,7 +49,7 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="Röstinställningar"
+            android:label="Inställningar"
             android:parentActivityName=".MainActivity"
             >
 

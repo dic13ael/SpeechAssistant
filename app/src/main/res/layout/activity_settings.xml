@@ -5,166 +5,226 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blueColor"
-
     tools:context="com.tnx097.speechassistant.SettingsActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/settings1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Kön"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:id="@+id/radio1"
-            >
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView"
-            android:layout_marginTop="14dp"
-            android:buttonTint="@color/TextColor"
-            android:text="Man" />
+            <RelativeLayout
+                android:id="@+id/settings1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp">
 
-        <RadioButton
-            android:id="@+id/radioButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/radioButton2"
-            android:buttonTint="@color/TextColor"
-            android:text="Kvinna" />
-        </RadioGroup>
-    </RelativeLayout>
+                <TextView
+                    android:id="@+id/voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Röstinställningar"
+                    android:textSize="25dp" />
 
-    <RelativeLayout
-        android:id="@+id/settings2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/settings1"
-        android:padding="5dp">
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/voice"
+                    android:text="Kön"
+                    android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/display"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Display"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            />
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/display"
-            android:id="@+id/radio2"
-            >
-        <RadioButton
-            android:id="@+id/normal"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/display"
-            android:text="Normal"
-            android:buttonTint="@color/TextColor"
-            />
+                <RadioGroup
+                    android:id="@+id/radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView">
 
-        <RadioButton
-            android:id="@+id/kontrast"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/normal"
-            android:text="Kontrast"
-            android:buttonTint="@color/TextColor"
-            />
-        </RadioGroup>
-    </RelativeLayout>
-    <RelativeLayout
-        android:id="@+id/settings3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/settings2"
-        android:padding="5dp">
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/textView"
+                        android:layout_marginTop="14dp"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Man" />
 
-        <TextView
-            android:id="@+id/dialekt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingTop="5dp"
-            android:text="Dialekt"
-            android:textSize="20dp"
-            android:textStyle="bold" />
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/dialekt"
-            android:id="@+id/radio3"
-            >
-        <RadioButton
-            android:id="@+id/skanska"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/dialekt"
-            android:text="Skånska"
-            android:buttonTint="@color/TextColor"
-            />
+                    <RadioButton
+                        android:id="@+id/radioButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/radioButton2"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Kvinna" />
+                </RadioGroup>
+            </RelativeLayout>
 
-        <RadioButton
-            android:id="@+id/sh"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/skanska"
-            android:text="Stockholmska"
-            android:buttonTint="@color/TextColor"
-            />
+            <RelativeLayout
+                android:id="@+id/settings3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings1"
+                android:padding="5dp">
 
-        <RadioButton
-            android:id="@+id/norr"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sh"
-            android:text="Norlänska"
-            android:buttonTint="@color/TextColor"
-            />
+                <TextView
+                    android:id="@+id/dialekt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="5dp"
+                    android:text="Dialekt"
+                    android:textSize="20dp" />
 
-        <RadioButton
-            android:id="@+id/gote"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/norr"
-            android:text="Göteborgska"
-            android:buttonTint="@color/TextColor"
-            />
+                <RadioGroup
+                    android:id="@+id/radio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dialekt">
 
-        <RadioButton
-            android:id="@+id/sma"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/gote"
-            android:text="Smålänska"
-            android:buttonTint="@color/TextColor"
-            />
+                    <RadioButton
+                        android:id="@+id/skanska"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/dialekt"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Skånska" />
 
-        <RadioButton
-            android:id="@+id/got"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/sma"
-            android:text="Gotlänska"
-            android:buttonTint="@color/TextColor"
-            />
-        </RadioGroup>
-    </RelativeLayout>
+                    <RadioButton
+                        android:id="@+id/sh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/skanska"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Stockholmska" />
+
+                    <RadioButton
+                        android:id="@+id/norr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sh"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Norrländska" />
+
+                    <RadioButton
+                        android:id="@+id/gote"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/norr"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Göteborgska" />
+
+                    <RadioButton
+                        android:id="@+id/sma"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/gote"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Småländska" />
+
+                    <RadioButton
+                        android:id="@+id/got"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/sma"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Gotländska" />
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/settings3"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/display1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skärminställningar"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/display"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/display1"
+                    android:text="Färg"
+                    android:textSize="20dp" />
+
+                <RadioGroup
+                    android:id="@+id/radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/display">
+
+                    <RadioButton
+                        android:id="@+id/normal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/display"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Normal" />
+
+                    <RadioButton
+                        android:id="@+id/kontrast"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/normal"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Kontrast" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/setting4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/settings2"
+                android:padding="5dp"
+                >
+
+                <TextView
+                    android:id="@+id/vibration"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Vibration"
+                    android:textSize="20dp"
+                    />
+
+                <RadioGroup
+                    android:id="@+id/vibgroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/vibration">
+
+                    <RadioButton
+                        android:id="@+id/på"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/vibration"
+                        android:buttonTint="@color/TextColor"
+                        android:text="På" />
+
+                    <RadioButton
+                        android:id="@+id/av"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@+id/på"
+                        android:buttonTint="@color/TextColor"
+                        android:text="Av" />
+                </RadioGroup>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
