@@ -60,9 +60,9 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
                 isSpeaking = true;
                 EditText enteredText = (EditText) findViewById(R.id.meddelandeText);
                 words = enteredText.getText().toString();
-                int sec = 1 + words.length() / 6;
+               /* int sec = 1 + words.length() / 6;
 
-             /*   // Repeat animation for some time
+                // Repeat animation for some time
                 int sec = 1 + words.length() / 6;
                 animation.setRepeatCount(sec);
                 button.startAnimation(animation);*/
@@ -72,7 +72,7 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
                 vib.vibrate(50);
                 speak(words);
 
-               timer = new CountDownTimer(sec*400, 50) {
+               timer = new CountDownTimer(5000, 50) {
 
                     @Override
                     public void onTick(long arg0) {
@@ -157,6 +157,22 @@ public class MessageActivity extends AppCompatActivity implements TextToSpeech.O
     }
 
     @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        myTTS.shutdown();
+       if(timer != null){ timer.cancel();}
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+    }
+        @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.actionbar_start:
