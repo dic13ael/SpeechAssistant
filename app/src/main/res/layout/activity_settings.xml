@@ -13,18 +13,20 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="5dp">
 
             <RelativeLayout
                 android:id="@+id/settings1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:padding="5dp">
+                android:paddingBottom="10dp">
 
                 <TextView
                     android:id="@+id/voice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:paddingBottom="5dp"
                     android:text="Röstinställningar"
                     android:textSize="25dp" />
 
@@ -49,7 +51,6 @@
                         android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/textView"
-                        android:layout_marginTop="14dp"
                         android:buttonTint="@color/TextColor"
                         android:text="Man" />
 
@@ -69,14 +70,12 @@
                 android:id="@+id/settings3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/settings1"
-                android:padding="5dp">
+                android:layout_below="@id/settings1">
 
                 <TextView
                     android:id="@+id/dialekt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingTop="5dp"
                     android:text="Dialekt"
                     android:textSize="20dp" />
 
@@ -141,7 +140,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/settings3"
-                android:padding="5dp">
+                android:paddingTop="10dp">
 
                 <TextView
                     android:id="@+id/display1"
@@ -150,36 +149,6 @@
                     android:text="Skärminställningar"
                     android:textSize="25dp" />
 
-                <TextView
-                    android:id="@+id/display"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/display1"
-                    android:text="Färg"
-                    android:textSize="20dp" />
-
-                <RadioGroup
-                    android:id="@+id/radio2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/display">
-
-                    <RadioButton
-                        android:id="@+id/normal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/display"
-                        android:buttonTint="@color/TextColor"
-                        android:text="Normal" />
-
-                    <RadioButton
-                        android:id="@+id/kontrast"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/normal"
-                        android:buttonTint="@color/TextColor"
-                        android:text="Kontrast" />
-                </RadioGroup>
 
             </RelativeLayout>
 
@@ -189,16 +158,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/settings2"
-                android:padding="5dp"
-                >
+                android:paddingTop="5dp">
 
                 <TextView
                     android:id="@+id/vibration"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Vibration"
-                    android:textSize="20dp"
-                    />
+                    android:textSize="20dp" />
 
                 <RadioGroup
                     android:id="@+id/vibgroup"
